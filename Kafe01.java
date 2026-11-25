@@ -23,7 +23,6 @@ public class Kafe01 {
     public static int hitungTotalHarga01(int pilihanMenu, int banyakItem) {
         int[] hargaItems = {15000, 20000, 22000, 12000, 10000, 18000};
         int hargaTotal = hargaItems[pilihanMenu - 1] * banyakItem;
-        return hargaTotal;
     }
 
     public static void main(String[] args) {
@@ -36,9 +35,9 @@ public class Kafe01 {
         System.out.print("Masukkan jumlah item yang ingin dipesan: ");
         int banyakItem = sc.nextInt();
 
-        hitungTotalHarga01(pilihanMenu, banyakItem);
+        int totalBayar = hitungTotalHarga01(pilihanMenu, banyakItem);
 
-        System.out.println("Proses perhitungan selesai.");
+        System.out.println("Total harga untuk pesanan Anda: Rp" + totalBayar);
 
         sc.close();
     }
